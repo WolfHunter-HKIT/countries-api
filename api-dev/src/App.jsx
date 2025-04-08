@@ -1,15 +1,27 @@
-import './App.css';
-import CountryFetch from './services/countryFetch.js';
-import { useEffect, useRef } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import CountryCard from './components/countryCard';
+import countryFetch from './services/countryFetch';
 
 function App() {
-	// Call once upon loading the page to fetch all countries.
-	useEffect(() => {
-		console.log(CountryFetch());
-	}, []);
+  const [countries, setCountries] = useState([]);
 
-	return <div className='App'></div>;
+  useEffect(() => {
+    const fetchCountries = async () => {
+      const data = await countryFetch();
+      setCountries(data);
+    };
+    fetchCountries();
+  }, []);
+
+  return (
+    <div className="App">
+      <div className="countryCards">
+        {Array.isArray(countries) && countries.map((country) => (
+          <CountryCard key={country.name} country={country} />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default App;
