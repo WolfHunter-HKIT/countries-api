@@ -1,7 +1,29 @@
+.countryFilters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.filterButton {
+  margin-right: 10px;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .countryCards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+  padding: 10px;
+
 }
 
 .countryCard {
