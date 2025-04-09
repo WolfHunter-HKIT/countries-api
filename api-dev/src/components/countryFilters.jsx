@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import countryFetch from '../services/countryFetch';
+import CountryFetch from '../services/countryFetch';
 import CountryCard from './countryCard';
 
 const CountryFilters = ({ showAllCountries }) => {
@@ -9,7 +9,7 @@ const CountryFilters = ({ showAllCountries }) => {
 
   // Fetches countries data when the component mounts
   useEffect(() => {
-    countryFetch()
+    CountryFetch()
       .then((data) => {
         setCountries(data);
         const uniqueRegions = [...new Set(data.map((country) => country.region))];
