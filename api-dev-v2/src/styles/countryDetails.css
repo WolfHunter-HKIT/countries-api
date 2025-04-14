@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #061831;
+  box-sizing: border-box;
+}
+.container a {
+  position: absolute;
+  top: 2vh;
+  left: 5vw;
+  justify-self: flex-start;
+}
+.container a button {
+  font-size: 35px;
+  border: 4px solid rgb(84, 82, 82);
+  border-radius: 10px;
+}
+.container a button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 66, 66);
+}
+
+.countryDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  margin: auto 0;
+  border: 5px solid rgb(84, 82, 82);
+  border-radius: 9px;
+}
+.countryDetails div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: #ccc;
+}
+.countryDetails div p {
+  border: none;
+}
+.countryDetails h2,
+.countryDetails p,
+.countryDetails img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  background-color: #ccc;
+}
+.countryDetails h2 {
+  padding: 2vh 0;
+  font-weight: 900;
+  font-size: 35px;
+}
+.countryDetails p {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}/*# sourceMappingURL=countryDetails.css.map */
