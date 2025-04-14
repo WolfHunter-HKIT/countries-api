@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CountryCard from './components/countryCard';
 import CountryFetch from './services/countryFetch';
 import CountryFilters from './components/countryFilters';
+import './styles/countryCards.css';
 
 function App() {
 	const [showAllCountries, setShowAllCountries] = useState(true);

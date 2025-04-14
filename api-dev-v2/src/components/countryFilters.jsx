@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CountryFetch from '../services/countryFetch';
 import CountryCard from './countryCard';
+import classNames from 'classnames';
 
 const CountryFilters = ({ showAllCountries }) => {
 	const [filter, setFilter] = useState('all');
@@ -40,12 +41,11 @@ const CountryFilters = ({ showAllCountries }) => {
 					{regions.map((region) => (
 						<button
 							key={region}
-							className='filterButton'
+							className={classNames('filterButton', {
+								activeFilter: filter === region,
+							})}
 							value={region}
 							onClick={handleFilterChange}
-							style={{
-								backgroundColor: filter === region ? '#ccc' : '#f0f0f0',
-							}}
 						>
 							{region.toUpperCase()}
 						</button>
